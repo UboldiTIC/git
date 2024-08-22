@@ -107,3 +107,18 @@ git tag (muestra las versiones)
 
 git push origin v0.1.0 (envia la versión al remoto)
 
+## Git Ignore
+
+### Frontend con VSCode
+
+Crear un archvio llamado .gitignore en el sitio raíz dónde se encuentra nuestro index.html y agregarle dentro todos los archivos que deseamos ignorar y las carpeta. 
+
+* Archivos (agregar solo el nombre y la extensión):
+~~~
+archivo_ejemplo.html
+~~~
+
+* Carpetas (/nombre_de_carpeta):
+~~~
+/carpeta_ejemplo
+~~~
