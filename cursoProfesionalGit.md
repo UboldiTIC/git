@@ -1,3 +1,46 @@
+## Configuración Inicial (en directorio raíz):
+
+[Documentación de GitHub](https://docs.github.com/es)
+
+Configurar nombre de usuario en git (luego de formatear):
+~~~
+git config --global user.name (para todo lo que hagamos en el pc)
+git config --global user.email "solmaruboldi@gmail.com"
+~~~
+
+Configura nombre de usuario en un proyecto (en algún proyecto que lo requiera):
+~~~
+git config --local user.name (para un proyecto)
+~~~
+Ver la configuración: 
+~~~
+git config user.name (muestra la configuración)
+~~~
+
+### Llave SSH (luego de formatear volver a crear llave):
+
+[Documentación](https://docs.github.com/es/search?query=crear+llave+ssh)
+
+Crear una nueva llave (algoritmo 4096):
+~~~
+ssh-keygen -t rsa -b 4096 -C "solmaruboldi@gmail.com"
+~~~
+Contraseña: usar la de siempre, ver en el cuaderno o inventar una nueva. No olvidarla.
+
+Agregar la llave a Git:
+~~~
+eval "$(ssh-agent -s)"
+~~~
+
+Agregar la llave al agente:
+~~~
+ssh-add ~/.ssh/id_rsa
+~~~
+Luego, en GitHub: Perfil -> Setting -> SSH y GPG keys -> New SSH Key (poner título descriptivo del equipo y abajo pegar el contenido de id_rsa.pub en Home/User/.ssh) 
+--------------------------
+
+## Comandos de uso general:
+
 git init = Añadir repositorio
 
 git status = Estado de Git
@@ -22,14 +65,6 @@ git log --help (Manual de log - sino pagina devhints.io/git-log )
 git log --graph
 
 -----------------------
-git config --local user.name (para un proyecto)
-
-git config --global user.name (para todo lo que hagamos en el pc)
-
-git config user.name (muestra la configuración)
-
-Para configurar email reemplazar name por email. 
---------------------------
 
 ¿Cuándo hacer un commit? Como regla general, nunca hacer commit a un código que no funciona. Pero cualquier modificación significativa, por pequeña que sea, una vez que está funcionando, se debe commitear. 
 
