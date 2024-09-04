@@ -36,7 +36,9 @@ Agregar la llave al agente:
 ~~~
 ssh-add ~/.ssh/id_rsa
 ~~~
+
 Luego, en GitHub: Perfil -> Setting -> SSH y GPG keys -> New SSH Key (poner título descriptivo del equipo y abajo pegar el contenido de id_rsa.pub en Home/User/.ssh) 
+
 --------------------------
 
 ## Comandos de uso general:
