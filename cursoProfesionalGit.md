@@ -159,3 +159,10 @@ archivo_ejemplo.html
 ~~~
 /carpeta_ejemplo
 ~~~
+
+# Comandos muy útiles
+
+Clonar una rama remota que hizo otro compañero dentro de un repositorio local existente:
+~~~
+git checkout -b nueva_rama_local origin/rama_remota_compa
+~~~
